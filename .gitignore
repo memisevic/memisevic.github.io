@@ -1,0 +1,17 @@
+# CV source and build directory — private, not part of the published site.
+# The rendered CV lives at assets/cv.pdf, which IS published.
+cv/
+
+# Old snapshots / backups
+backup_*/
+
+# Full-res / superseded portrait assets not used by the site
+assets/portrait_original.jpg
+assets/portrait.png
+
+# Symlink into another local tree — target won't exist off this machine
+diro_website
+
+# OS cruft
+.DS_Store
+Thumbs.db
