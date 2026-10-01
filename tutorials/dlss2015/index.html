@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DLSS 2015 — Lecture archive</title>
+<meta name="description" content="Lecture-slide archive of the 2015 CRM/CIFAR Deep Learning Summer School held in Montréal, co-organized by Yoshua Bengio, Roland Memisevic and Yann LeCun.">
+<link rel="stylesheet" href="../../style.css">
+<style>
+  .back {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+  }
+  .lead {
+    font-size: 1.02rem;
+    color: var(--text);
+  }
+  .lead .note {
+    display: block;
+    margin-top: 1rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  h3.day {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 2.2rem 0 0.75rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  ul.lectures {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.lectures li {
+    padding: 0.5rem 0;
+    display: grid;
+    grid-template-columns: 10rem 1fr auto;
+    gap: 1rem;
+    align-items: baseline;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  ul.lectures .speaker {
+    font-weight: 600;
+    color: var(--text);
+  }
+  ul.lectures .title {
+    color: var(--text-muted);
+  }
+  ul.lectures .link {
+    font-size: 0.88rem;
+    white-space: nowrap;
+  }
+  ul.lectures .link.external::after {
+    content: " ↗";
+    color: var(--text-faint);
+  }
+  @media (max-width: 32rem) {
+    ul.lectures li {
+      grid-template-columns: 1fr;
+      gap: 0.1rem;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+  }
+  .takedown {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<main>
+
+  <a class="back" href="../../index.html">← Roland Memisevic</a>
+
+  <h1 style="font-family: var(--serif); font-weight: 600; font-size: 2rem; line-height: 1.2; margin: 0 0 0.35rem;">
+    Deep Learning Summer School 2015
+  </h1>
+  <p style="color: var(--text-muted); margin: 0 0 1.8rem;">Lecture archive &nbsp;·&nbsp; Montréal, August 3&ndash;12, 2015</p>
+
+  <p class="lead">
+    This page archives the lecture slides from the 2015
+    <a href="https://sites.google.com/site/deeplearningsummerschool/">CRM/CIFAR Deep Learning Summer School</a>
+    in Montréal, which I co-organized with
+    <a href="https://yoshuabengio.org/">Yoshua Bengio</a> and
+    <a href="https://yann.lecun.com/">Yann LeCun</a>.
+    The slides were originally hosted on the organizer's directory at the Université de Montréal
+    (<code>iro.umontreal.ca/~memisevr/dlss2015/</code>); those links are no longer live.
+    This page mirrors the archive to keep the materials reachable.
+    <span class="note">Video recordings of most lectures are available via
+    <a href="http://videolectures.net/deeplearning2015_montreal/">VideoLectures.net</a>.</span>
+  </p>
+
+
+  <h3 class="day">Day 1 — Monday 3 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Pascal Vincent</span>
+      <span class="title">Intro to machine learning</span>
+      <span class="link"><a class="external" href="http://www.iro.umontreal.ca/~vincentp/Presentations/2015_august_DLSummerSchool_intro_to_ML_by_Pascal_Vincent.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Yoshua Bengio</span>
+      <span class="title">Theoretical motivations for representation learning &amp; deep learning</span>
+      <span class="link"><a class="external" href="http://www.iro.umontreal.ca/~bengioy/talks/dlss-3aug2015.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Léon Bottou</span>
+      <span class="title">Intro to multi-layer nets</span>
+      <span class="link"><a href="bottou.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <h3 class="day">Day 2 — Tuesday 4 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Hugo Larochelle</span>
+      <span class="title">Neural nets and backprop</span>
+      <span class="link"><a href="dlss_backprop_and_training.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Léon Bottou</span>
+      <span class="title">Numerical optimization &amp; SGD; structured problems &amp; reasoning</span>
+      <span class="link"><a href="bottou.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Hugo Larochelle</span>
+      <span class="title">Directed graphical models and NADE</span>
+      <span class="link"><a href="dlss_nade.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <h3 class="day">Day 3 — Wednesday 5 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Aaron Courville</span>
+      <span class="title">Intro to undirected graphical models</span>
+      <span class="link"><a href="undirected_graphical_models.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Honglak Lee</span>
+      <span class="title">Stacks of RBMs</span>
+      <span class="link"><a href="dlss_stacks_of_rbms.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Pascal Vincent</span>
+      <span class="title">Denoising and contractive autoencoders, manifold view</span>
+      <span class="link"><a class="external" href="http://www.iro.umontreal.ca/~vincentp/Presentations/2015_august_DLSummerSchool_autoencoders_by_Pascal_Vincent.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <h3 class="day">Day 4 — Thursday 6 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Roland Memisevic</span>
+      <span class="title">Visual features</span>
+      <span class="link"><a href="dlss_visualfeatures.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Honglak Lee</span>
+      <span class="title">Convolutional networks</span>
+      <span class="link"><a href="dlss_convolutional_networks.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Graham Taylor</span>
+      <span class="title">Learning similarity</span>
+      <span class="link"><a href="gwtaylor-01-learning_to_compare.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <h3 class="day">Day 5 — Friday 7 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Chris Manning</span>
+      <span class="title">NLP 101</span>
+      <span class="link"><a href="DLSS2015-NLP-1.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Graham Taylor</span>
+      <span class="title">Modeling human motion, pose estimation and tracking</span>
+      <span class="link"><a href="gwtaylor-02-seeing_people.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Chris Manning</span>
+      <span class="title">NLP / deep learning</span>
+      <span class="link"><a href="DLSS2015-NLP-2.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <h3 class="day">Day 6 — Saturday 8 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Ruslan Salakhutdinov</span>
+      <span class="title">Deep Boltzmann Machines</span>
+      <span class="link"><a href="talk_Montreal_part1_pdf.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Adam Coates</span>
+      <span class="title">Speech recognition with deep learning</span>
+      <span class="link"><a href="dlss_speech.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Ruslan Salakhutdinov</span>
+      <span class="title">Multi-modal models</span>
+      <span class="link"><a href="talk_Montreal_part2_pdf.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <h3 class="day">Day 7 — Sunday 9 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Ian Goodfellow</span>
+      <span class="title">Structure of optimization problems</span>
+      <span class="link"><a href="goodfellow_opt.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Adam Coates</span>
+      <span class="title">Systems issues &amp; distributed training</span>
+      <span class="link"><a href="dlss_systems.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Ian Goodfellow</span>
+      <span class="title">Adversarial examples</span>
+      <span class="link"><a href="goodfellow_adv.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <h3 class="day">Day 8 — Monday 10 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Phil Blunsom</span>
+      <span class="title">From language modeling to machine translation</span>
+      <span class="link"><a href="lm-mt.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Richard Socher</span>
+      <span class="title">Recurrent neural networks</span>
+      <span class="link"><a href="DLSummerSchoolRNNs.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Phil Blunsom</span>
+      <span class="title">Memory, reading, and comprehension</span>
+      <span class="link"><a href="num-mr.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <h3 class="day">Day 9 — Tuesday 11 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Richard Socher</span>
+      <span class="title">Dynamic memory networks for NLP</span>
+      <span class="link"><a href="DLSummerSchoolLecture2.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Mark Schmidt</span>
+      <span class="title">Smooth, finite, and convex optimization</span>
+      <span class="link"><a href="2015_DLSS_ConvexOptimization.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Roland Memisevic</span>
+      <span class="title">Visual features II</span>
+      <span class="link"><a href="dlss_visualfeatures2.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <h3 class="day">Day 10 — Wednesday 12 August</h3>
+  <ul class="lectures">
+    <li>
+      <span class="speaker">Mark Schmidt</span>
+      <span class="title">Non-smooth, non-finite, and non-convex optimization</span>
+      <span class="link"><a href="2015_DLSS_NonSmoothNonFiniteNonConvex.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Aaron Courville</span>
+      <span class="title">VAEs and deep generative models for vision</span>
+      <span class="link"><a href="DLSS2015_VAE.pdf">slides</a></span>
+    </li>
+    <li>
+      <span class="speaker">Yoshua Bengio</span>
+      <span class="title">Generative models from autoencoders</span>
+      <span class="link"><a class="external" href="http://www.iro.umontreal.ca/~bengioy/talks/dlss-12aug2015.pdf">slides</a></span>
+    </li>
+  </ul>
+
+
+  <p class="takedown">
+    Programming-tutorial materials (Theano / Fuel exercises) are on
+    <a href="https://github.com/mila-iqia/summerschool2015">the MILA GitHub repository</a>.
+    <br><br>
+    <strong>Note to speakers:</strong> if you'd prefer your slides not be mirrored here, please
+    <a href="mailto:roland.memisevic@gmail.com">email me</a> and I'll remove them.
+  </p>
+
+</main>
+
+</body>
+</html>
