@@ -1,0 +1,575 @@
+<!-- saved from url=(0058)http://www.ml.informatik.uni-frankfurt.de/teaching/ml2011/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<body>
+<center>
+<h1>
+IFT  2821  ­  Introduction  aux bases  de données
+</h1>
+<h1>
+Hiver 2015 
+</h1>
+</center>
+<br>
+<br>
+<h2>
+Local
+</h2>
+cours théorique: <br> 
+Lundi 18:30 - 20:30 1177 Pav Andre-Aisenstadt<br>
+démo: <br>
+Lundi 20:30 - 22:30 1340 Pav. Andre-Aisenstadt
+<br>
+<h2>
+Professeur 
+</h2>
+<a href="http://www.iro.umontreal.ca/~memisevr/">Roland Memisevic</a>
+<br>
+Consultation: après le cours ou sur rendez-vous.
+<br>
+roland.memisevic..at..umontreal.ca
+<br>
+Démos: Abdessamad Outerqiss, Jean-Philippe Raymond
+<br>
+<h2>
+Exigences 
+</h2>
+Préalables: 
+IFT1166 OU IFT1170 OU IFT1175 OU IFT1179
+<br>
+<br>
+<h2>
+Livre recommandés pour le cours
+</h2>
+<b>Robert Godin: Systèmes de gestion de bases de données par l’exemple.</b> (Loze-Dion)<br><br>
+<br>
+
+<h2 id="evaluation">Evaluation</h2>
+<table border="1" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<th>Mode d'évaluation</th>
+<th>Valeur</th>
+<th></th>
+</tr>
+<tr>
+<td>Travaux pratiques</td>
+<td>40%</td>
+<td>2 devoirs comportant des parties théoriques et de programmation et d'expérimentation. </td>
+</tr>
+<tr>
+<td>Examen intra</td>
+<td>30%<br>
+Notes de cours autorisés
+</td>
+<td>23 Fev, 19:00 - 21:00 1140 Pav Andre-Aisenstadt </td>
+</tr>
+<tr>
+<td>Examen final</td>
+<td>30%<br>
+Notes de cours autorisés
+</td>
+<td>20 Avr, 19:30 - 22:00 1140 Pav Andre-Aisenstadt <br>
+</td>
+</tr>
+</tbody>
+</table>
+<br>
+
+
+
+<br>
+<h2>
+Programme 
+</h2>
+<table border="1">
+
+
+
+<tbody><tr>
+<td> 
+Date
+</td> 
+<td> 
+Cours 
+</td> 
+<td> 
+Sujet 
+</td>
+<td> 
+Lectures supplémentaires
+</td>
+<td> 
+Matériel du cours
+</td>
+</tr>
+
+
+<tr>
+<td> 
+12 Jan 
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Introduction
+</td>
+<td> 
+Livre chapitre 1
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/notes1.pdf">notes 1</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+12 Jan
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+Introduction 
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/BDD_introduction_formatted.sql">script SQL</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+19 Jan 
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Processus de conception de BD
+</td>
+<td> 
+Livre chapitre 2
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/notes2.pdf">notes 2</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+19 Jan 
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+26 Jan 
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Modèle relationnel
+</td>
+<td> 
+Livre chapitre 3
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/notes3.pdf">notes 3</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+26 Jan 
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+Conception
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo1.pdf">demo1</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo1sol.pdf">demo1 solutions</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+2 Fev
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Modèle relationnel (cont.)
+</td>
+<td> 
+Livre chapitre 3
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/notes3b.pdf">notes 3b</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+2 Fev
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+Modèle relationnel
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo2.pdf">demo2</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo2sol1.png">demo2 solution1</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo2sol2.png">demo2 solution2</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+9 Fev
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Le langage SQL 
+</td>
+<td> 
+Livre chapitre 4
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/devoir1.pdf">devoir 1</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+9 Fev
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+Création de tables et algèbre relationnelle
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo3.pdf">demo3</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo3sol.pdf">demo3 solution</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+16 Fev
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Le langage SQL (cont)
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/notes4.pdf">notes 4 complétés</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+16 Fev
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+Requêtes SQL
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo4.pdf">demo4</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo4sol.pdf">demo4 solution</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+23 Fev
+</td> 
+<td> 
+<b> Examen intra </b>
+</td> 
+<td> 
+Notes de cours autorisés
+</td>
+<td> 
+</td>
+<td> 
+devoir 1 à remettre
+</td>
+</tr>
+
+
+<tr>
+<td> 
+9 Mars  
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+discussion intra 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+9 Mars  
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+discussion devoir 1
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+16 Mars  
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+discussion intra (cont.), SQL (cont.)
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+16 Mars  
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo5.pdf">demo5</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo5sol.pdf">demo5 solution</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+23 Mars  
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Le langage SQL (cont)
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/devoir2.pdf">devoir 2</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/notes4b.pdf">notes 4b</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+23 Mars  
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/BddVentes_fr.sql">script BddVentes</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/Explications.pdf">Explications</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo6.pdf">demo6</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo6sol.pdf">demo6 solution</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+30 Mars  
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Le langage SQL (cont), <br>
+Théorie de la normalisation 
+</td>
+<td> 
+</td>
+<td> 
+devoir 2 à remettre<br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+30 Mars  
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo7.pdf">demo7</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo7_sol.pdf">demo7 solutions</a> <br>
+</td>
+</tr>
+
+<tr>
+<td> 
+13 Avril 
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Théorie de la normalisation (cont) <br>
+Révision 
+</td>
+<td> 
+Livre chapitre 11
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/notes5.pdf">notes 5 complétés</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+13 Avril 
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo8.pdf">demo8</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/demo8_sol.pdf">demo8 solutions</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift2821_2015/devoir2sol.pdf">solutions devoir 2</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+20 Avril 
+</td> 
+<td> 
+<b>examen final</b>
+</td> 
+<td> 
+Notes de cours autorisés
+</td>
+<td> 
+examen 
+</td>
+<td> 
+examen 
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+
+</tbody></table>
+<br>
+<br>
+
+<br>
+<br>
+Toutes les informations sur ce site sont pour référence seulement et peuvent changer à tout moment.
+<br>
+<br>
+<br>
+
+ 
+
+
+</body></html>

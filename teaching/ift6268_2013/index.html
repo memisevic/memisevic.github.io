@@ -1,0 +1,667 @@
+<html>
+<head>
+<title>IFT 6268 - Fall 2013</title>
+</head>
+<body>
+<center>
+<h1>
+IFT 6268, Fall 2013 <br>
+</h1>
+<h2>
+Machine Learning for Vision
+</h2>
+</center>
+<br>
+
+<center>
+<table border=0 cellspacing=0 cellpadding=2 width="50%" bgcolor=#FFFFFF>
+<tr>
+<td colspan=1><img src="convnet.png" width="100%"></td>
+<td width=30%><img src="800px-Ventral-dorsal_streams.svg.png" title="http://en.wikipedia.org/wiki/File:Ventral-dorsal_streams.svg#globalusage" width="100%"></td>
+<td width=30%><img src="mv_features1.png" width="100%"></td>
+</tr>
+<tr>
+<td><img src="running_01.jpg" width="100%"></td>
+<td width=20%><img src="meanface.png" width="100%"></td>
+<td width=20%><img src="bus.png" width="100%"></td>
+</tr>
+</table>
+
+<br>
+</center>
+
+<br>
+<h2>
+Time and Place
+</h2>
+Tuesdays   1:30pm - 3:30pm <br> <b>Z-205</b> Pav. Claire-McNicoll <br><br>
+Wednesdays 11:30am - 1:30pm <br> <b>Z-300</b> Pav. Claire-McNicoll <br>
+
+<br>
+<h2>
+Instructor
+</h2>
+<a href="http://www.cs.uni-frankfurt.de/~ro">Roland Memisevic</a>
+<br>
+Office : 3349, Pav. Andre-Aisenstadt<br>
+Office hours: drop in or by appointment. <br>
+email: memisevr@iro.umontreal.ca<br>
+<br>
+<h2>
+Topics
+</h2>
+Machine learning and visual perception; 
+natural image statistics;
+learning visual features; 
+bio-inspired models; 
+learning mid-level features, motion, structure; 
+vision and "big data". 
+<br>
+<br>
+<h2>
+Course description 
+</h2>
+Machine learning has made huge progress in recent years in building vision systems from the bottom up: by utilizing large amounts of image data and a minimum of hand-tweaking or human intervention. 
+Most of the recent advances in visual perception are due to the fact that images are 
+not "random": The set of natural images (imagine all photos that one could ever take on earth) is much smaller than the vast space of all <i> possible </i> images (all possible configurations of colored pixels). 
+Natural images, for example, tend to contain large, homogeneous areas, separated by few edges and fewer junctions. The combination of these features gives rise to objects, people, landscapes, and other things we typically see and care about. 
+By learning to utilize this inherent statistical structure in images, data-driven learning 
+makes it possible to simplify the task of making sense of images, 
+and to translate advances in compute power into advances in building vision systems.  
+<br>
+<br>
+In this course we will survey recent research on machine learning of visual perception, paying particular attention to bottom-up, data-driven methods and the statistics of natural images. 
+The format of the course will be a mix of lectures and discussions of recent papers in this emerging field. Final projects will be research based and may ultimately lead to a research paper in this area. 
+<br>
+<br>
+<h2>
+Prerequisites
+</h2>
+Familiarity with calculus, linear algebra and statistics is required.
+A background in vision is not required. 
+Some experience with machine learning, for example, as taught in IFT6141 (Reconnaissance des formes) or IFT6390 (Fondements de l'apprentissage machine) will be useful.
+If unsure about the sufficiency of your background, contact instructor. 
+<br>
+<br>
+
+<h2>
+Textbook
+</h2>
+
+<table width=80%>
+<tr>
+<td width=20%>
+<img src="NatImStats.png" width="80%">
+</td>
+<td width=80%>
+Although there is no official class textbook, we will make some use of some material from "Natural Image Statistics: A Probabilistic Approach to Early Computational Vision" by Hyvarinen, Hurri, Hoyer (Springer 2009).
+</td>
+</tr>
+<table>
+<ul>
+<li> Useful background on machine learning: Bishop (2006) "Pattern Recognition and Machine Learning". 
+</ul>
+
+<br>
+<h2>
+Marking scheme
+</h2>
+<ul>
+<li>readings (10%):<br>
+Readings are worth 1% each on the honour system. <br>
+Once you have done the reading, email instructor 
+with the subject line "IFT6268 readingX completed"<br>
+instructor email is memisevr@iro.umontreal.ca
+</li>
+<li>assignments (30%):<br>
+3 assignments worth 10% each
+</li> 
+<li>class participation (20%):<br>
+Each student is expected to present two research papers. See <a href="presentations.html">detailed presentation guidelines</a>. 
+</li>
+<li>term project (40%): See <a href="project.pdf">detailed project guidelines</a>. 
+</li>
+</ul>
+
+
+<h2>
+Time Table 
+</h2>
+<table border=1 cellspacing=0 cellpadding=2 width="80%" bgcolor=#EEEEEE>
+
+<tr>
+<td> 
+Date
+</td> 
+<td> 
+Topic
+</td>
+<td width=40%> 
+Readings
+</td>
+<td> 
+Notes
+</td>
+</tr>
+
+<tr>
+<th colspan=4>Introduction / background</th>
+</tr>
+
+
+
+<tr>
+<td> 
+Sept. 4
+</td> 
+<td> 
+Lecture: Introduction
+</td>
+<td> 
+</td>
+<td> 
+<a href="notes0.pdf">notes</a>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Sept. 10
+</td> 
+<td> 
+Probability/linear algebra review 
+</td>
+<td> 
+<ul>
+</ul>
+</td>
+<td> 
+<a href="prob_review.pdf">notes</a>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Sept. 11
+</td> 
+<td> 
+Python review
+</td>
+<td> 
+<ul>
+</ul>
+</td>
+<td> 
+<a href="notes_python.pdf">notes</a>
+<br>
+<a href="logsumexp.py">logsumexp.py</a>
+</td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<th colspan=4> Learning about images</th>
+</tr>
+
+<tr> 
+<td colspan=4>
+<font size="2">
+Other readings 
+<ul>
+    <li>
+    Some Informational Aspects Of Visual Perception. F. Attneave. Psychological Review 1954. <a href="http://wexler.free.fr/library/files/attneave%20(1954)%20some%20informational%20aspects%20of%20visual%20perception.pdf">[pdf]</a>
+    <li> 
+    <b> Deconvolutional Networks.</b> M. Zeiler, D. Krishnan, G. Taylor, R. Fergus. CVPR 2010. <a href="http://www.matthewzeiler.com/pubs/cvpr2010/cvpr2010.pdf">[pdf]</a> 
+    <li>
+    <b> Fields of Experts. S. Roth, M. Black</b>. IJCV 2007. <a href="http://www.gris.informatik.tu-darmstadt.de/~sroth/pubs/foe-ijcv.pdf">[pdf]</a>  
+    <li>
+    <b>How to generate realistic images using gated MRF's.</b> M.A. Ranzato, V. Mnih, G. Hinton. NIPS 2010. <a href="http://www.cs.toronto.edu/~ranzato/publications/ranzato_nips2010.pdf">[pdf]</a>  
+</ul>
+</font>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Sept. 17
+</td> 
+<td> 
+Filtering, convolution, phasor signals 
+</td>
+<td> 
+    Reading 1: Possible Principles Underlying the Transformations of Sensory Messages. (Barlow, 1961) <a href="http://www.trin.cam.ac.uk/horacebarlow/21.pdf">[pdf]</a><br>
+</td>
+<td> 
+<a href="notes1.pdf">notes</a>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Sept. 18
+</td> 
+<td> 
+Fourier transforms on images
+</td>
+<td> 
+</td>
+<td> 
+<a href="notes2.pdf">notes</a>
+</td>
+</tr>
+
+
+
+<tr>
+<td> 
+Sept. 24
+</td> 
+<td> 
+Sampling, leakage, windowing 
+</td>
+<td> 
+Reading 2: <a href="http://www.scholarpedia.org/article/Sparse_coding">sparse coding</a> (Foldiak, Endres; scholarpedia 2008) 
+</td>
+<td> 
+Reading 1 due <br>
+<a href="notes3_.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Sept. 25
+</td> 
+<td> 
+PCA, stationarity and Fourier bases
+</td>
+<td> 
+</td>
+<td> 
+<a href="notes4.pdf">notes</a><br>
+<a href="assignment1.pdf">Assignment1</a> (worth 10%)
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Oct. 1
+</td> 
+<td> 
+PCA and whitening cont'd.
+</td>
+<td> 
+    Reading 3: Emergence of Simple-Cell Receptive Field Properties by Learning a Sparse Code for Natural Images. (Olshausen, Field 1996). <a href="http://redwood.berkeley.edu/bruno/papers/nature-paper.pdf">[pdf]</a>
+</td>
+<td> 
+Reading 2 due <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Oct. 2
+</td> 
+<td> 
+Some facts about vision in the brain
+</td>
+<td> 
+</td>
+<td> 
+Assignment 1 due <br>
+<a href="solutionA1_Q3.py">solution to question 3</a><br>
+<a href="solutionA1_Q4.py">solution to question 4</a><br>
+<a href="logreg.py">logreg.py</a><br>
+<a href="http://www.iro.umontreal.ca/~memisevr/code/minimize.py">minimize.py</a> (required if using Logreg.train_cg)<br>
+<a href="notes5_.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Oct. 8
+</td> 
+<td> 
+Vision in the brain cont'd.
+</td>
+<td> 
+Reading 4: The ``independent components'' of natural scenes are edge filters. (Bell, Sejnowski 1997) <a href="http://papers.cnl.salk.edu/PDFs/The%20The%20_'Independent%20Components_'%20of%20natural%20scenes%20are%20edge%20filters%201997-4064.pdf">[pdf]</a><br>
+</td>
+<td> 
+Reading 3 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Oct. 9
+</td> 
+<td> 
+Whitening vs independence, ICA
+</td>
+<td> 
+</td>
+<td> 
+<a href="assignment2.pdf">Assignment2</a> (worth 10%)<br>
+<a href="notes6.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Oct. 15
+</td> 
+<td> 
+ICA cont'd. 
+</td>
+<td> 
+Reading 5: Review backprop (aka error backpropagation). 
+For example, by watching week 5
+of <a href="https://class.coursera.org/ml/lecture/preview">this course</a> 
+or by reading Bishop, chapter 5.<br>
+If/once you know backprop, check out 
+<a href="http://www.deeplearning.net/software/theano/">theano</a> and these 
+<a href="http://www.deeplearning.net/tutorial/">tutorials</a>. 
+</td>
+<td> 
+Reading 4 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Oct. 16
+</td> 
+<td> 
+Overcomplete codes, energy based models
+</td>
+<td> 
+</td>
+<td> 
+Assignment 2 due <br>
+<a href="notes7.pdf">notes</a><br>
+<a href="solutionA2_Q3Q4.py">solution to questions 3 and 4</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Oct. 29
+</td> 
+<td> 
+Restricted Boltzmann machines 
+</td>
+<td> 
+    Reading 6: Feature Discovery by Competitive Learning (Rumelhart, Zipser; 1985) <a href="http://onlinelibrary.wiley.com/doi/10.1207/s15516709cog0901_5/pdf">[pdf]</a> (email instructor if you cannot access the pdf)
+</td>
+<td> 
+<a href="notes8.pdf">notes</a><br>
+Reading 5 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Oct. 30 
+</td> 
+<td> 
+Competitive Hebbian learning, k-means
+</td>
+<td> 
+</td>
+<td> 
+<a href="notes9.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Nov. 5
+</td> 
+<td> 
+Autoencoders, Convolutional networks
+</td>
+<td> 
+Reading 7: Pick one of the papers we will discuss on Nov 6 and Nov 12 (other than the one you present) and read it <b>very carefully</b>. In your email, say which one you read.<br>
+</td>
+<td> 
+<a href="notes10.pdf">notes</a><br>
+Reading 6 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Nov. 6
+</td> 
+<td> 
+Paper presentations, discussion
+</td>
+<td> 
+<ul>
+    <li> <b> Building high-level features using large scale unsupervised learning.</b> Q. Le, M.A. Ranzato, R. Monga, M. Devin, K. Chen, G. Corrado, J. Dean, A. Ng. ICML 2012. <a href="http://research.google.com/pubs/archive/38115.pdf">[pdf]</a> (David K.) <br>
+    <li> <b>An analysis of single-layer networks in unsupervised feature learning.</b> A. Coates, H. Lee, A. Y. Ng. AISTATS 2011. <a href="http://www.robotics.stanford.edu/~ang/papers/nipsdlufl10-AnalysisSingleLayerUnsupervisedFeatureLearning.pdf">[pdf]</a> (Gabriel F.) <br>
+</ul>
+</td>
+<td> 
+<a href="assignment3.pdf">Assignment3</a> (worth 10%)<br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Nov. 12
+</td> 
+<td> 
+Paper presentations, discussion
+</td>
+<td> 
+Reading 8: Spatiotemporal energy models for the perception of motion. Adelson and Bergen, 1985 <a href="http://www.cns.nyu.edu/csh04/Articles/Adelson-Bergen-85.pdf">[pdf]</a> <br>
+<ul>
+    <li> <b>Convolutional Deep Belief Networks for Scalable Unsupervised Learning of Hierarchical Representations.</b> H. Lee, et al. ICML 2009. <a href="http://web.eecs.umich.edu/~honglak/icml09-ConvolutionalDeepBeliefNetworks.pdf">[pdf]</a> (Eugene V.)
+    <li> <b> ImageNet Classification with Deep Convolutional Neural Networks.</b> A. Krizhevsky, I. Sutskever, G.E. Hinton. NIPS 2012. <a href="http://books.nips.cc/papers/files/nips25/NIPS2012_0534.pdf">[pdf]</a> (Sebastien O.)
+</ul>
+</td>
+<td> 
+Reading 7 due 
+</td>
+</tr>
+
+
+
+
+<tr>
+<th colspan=4> Learning about motion, geometry, invariance, shape</th>
+</tr>
+
+<tr> 
+<td colspan=4>
+<font size="2">
+Other readings 
+<ul>
+    <li> Neural Encoding of Binocular Disparity: Energy Models, Position Shifts and Phase Shifts. D. Fleet, H. Wagner, D. Heeger. Vision Research 1996. <a href="http://www.cs.utoronto.ca/~fleet/research/Papers/visRes-96.pdf">[pdf]</a>
+     <li>
+     <b>Convolutional Learning of Spatio-temporal Features.</b> G. Taylor, et al. ECCV 2010 <a href="http://www.uoguelph.ca/~gwtaylor/publications/eccv2010/1225.pdf">[pdf]</a> <br>
+    <li> 
+    <b>Learning Intermediate-Level Representations of Form and Motion from Natural Movies.</b> C. Cadieu, B. Olshausen. Neural Computation 2012. <a href="http://charles.cadieu.us/wp-content/uploads/2012/03/neco_a_00247_Cadieu_Olshausen_paper.pdf">[pdf]</a> <br>
+    <li>
+    <b>On Random Weights and Unsupervised Feature Learning.</b> A Saxe, et al. ICML 2011 <a href="http://www.stanford.edu/~asaxe/papers/Saxe%20et%20al.%20-%202011%20-%20On%20Random%20Weights%20and%20Unsupervised%20Feature%20Learning.pdf">[pdf]</a> <br>
+    <li> <b>Transforming Auto-encoders.</b> G. Hinton, et al. ICANN 2011. <a href="http://www.cs.toronto.edu/~hinton/absps/transauto6.pdf">[pdf]</a>  
+    <li> 
+    <b>Compete to compute</b> Srivastave et al. NIPS 2013 <a href="http://www.idsia.ch/idsiareport/IDSIA-04-13.pdf">[pdf]</a>
+</ul>
+</font>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Nov. 13
+</td> 
+<td> 
+Learning about relations 
+</td>
+<td> 
+</td>
+<td> 
+Assignment 3 due <br>
+<a href="solutionA3_Q2.py">solution to question 2</a><br>
+<a href="http://www.iro.umontreal.ca/~memisevr/cifar2013/index.html">slides from my cifar tutorial</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Nov. 19
+</td> 
+<td> 
+Paper presentations, discussion
+</td>
+<td> 
+Reading 9: Pick one of the papers we will discuss on Nov 19 and Nov 20 (other than the one you present) and read it <b>very carefully</b>. In your email, say which one you read.<br><br>
+     <b>DeViSE: A Deep Visual-Semantic Embedding Model</b> Frome et al. NIPS 2013 <a href="http://static.googleusercontent.com/external_content/untrusted_dlcp/research.google.com/en//pubs/archive/41473.pdf">[pdf]</a> (Sebastien O.) <br>
+        <b>Learning hierarchical invariant spatio-temporal features for action recognition with independent subspace analysis.</b> Le, et al. CVPR 2011 <a href="http://ai.stanford.edu/~quocle/LeZouYeungNg11.pdf">[pdf]</a> (David K.) <br>
+</td>
+<td> 
+Reading 8 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Nov. 20
+</td> 
+<td> 
+Paper presentations, discussion
+</td>
+<td> 
+    <b>Deep Learning of Invariant Features via Simulated Fixations in Video.</b> Zou et al. NIPS 2012.  <a href="http://books.nips.cc/papers/files/nips25/NIPS2012_1467.pdf">[pdf]</a> (Gabriel F.) <br>
+    <b>Learning to combine foveal glimpses with a third-order Boltzmann machine.</b> H. Larochelle and G. Hinton. NIPS 2010. <a href="http://books.nips.cc/papers/files/nips23/NIPS2010_0824.pdf">[pdf]</a> (Eugene V.) <br>
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Nov. 26
+</td> 
+<td> 
+Learning about relations cont'd.
+</td>
+<td> 
+Reading 10: Pick a highly relevant related work for your class project, and read it <b>very carefully</b>. In your email, say which one you read. (due Dec. 3)<br><br>
+</td>
+<td> 
+Reading 9 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Nov. 27
+</td> 
+<td> 
+Project discussions 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Nov. 28, 12:30pm<br>
+Location: Pav. Andre-Aisendstadt, rm 3195 
+</td> 
+<td> 
+Structured prediction, misc, wrap-up
+</td>
+<td> 
+</td>
+<td> 
+<a href="notes11.pdf">notes</a><br>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+<tr> 
+<td colspan=4>
+<font size="2">
+    <ul>
+    </ul>
+</font>
+</td>
+</tr>
+
+
+
+
+
+</table>
+<br>
+
+Other topics we may or may not have the time to cover include saliency, attention, 
+detailed scene understanding, multi-modal learning. 
+
+<h2>
+Resources 
+</h2>
+<ul>
+</ul>
+<h3>
+Datasets
+</h3>
+<ul>
+    <li> The <a href="http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/index.html">PASCAL 2007 challenge </a> is a commonly used recognition benchmark. 
+    <li> The <a href="http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/index.html">latest PASCAL challenge</a>.  
+    <li> The <a href="http://groups.csail.mit.edu/vision/TinyImages/">80 mio tiny images</a> dataset.
+    <li> The <a href="http://www.cs.toronto.edu/~kriz/cifar.html">CIFAR datasets</a> for recognition from tiny images. 
+    <li> The <a href="http://www.stanford.edu/~acoates//stl10/">STL-10 dataset</a> is similar to CIFAR but with larger images. 
+    <li> The <a href="http://www.image-net.org/challenges/LSVRC/2012/index">imagenet challenge</a> is huge and it seems to become a new standard benchmark. 
+    <li> A <a href="http://groups.csail.mit.edu/vision/SUN/">scene recognition</a> dataset. 
+    <li> The <a href="http://www.di.ens.fr/~laptev/actions/hollywood2/">Hollywood 2 dataset</a> is a standard dataset for activity recogition. 
+    <li> The <a href="http://www.nada.kth.se/cvap/actions/">KTH actions dataset</a> is a somewhat outdated activity recognition dataset, but still used for proof-of-concept comparisons ("MNIST of activity recognition").
+    <li> A <a href="http://www.cse.yorku.ca/vision/research/spacetime-texture.shtml">Spacetime texture</a> dataset.
+    <li> A <a href="http://www.cse.yorku.ca/vision/research/dynamic-scenes/">Dynamic scenes</a> dataset.
+    <li> An <a href="http://vision.cs.uiuc.edu/attributes/">attributes</a> benchmark dataset.
+</ul>
+<br>
+</body>
+</html> 
+
+

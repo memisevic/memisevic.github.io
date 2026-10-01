@@ -1,0 +1,956 @@
+<!-- saved from url=(0058)http://www.ml.informatik.uni-frankfurt.de/teaching/ml2011/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<body>
+<center>
+<h1>
+Fondements de l'apprentissage machine (IFT3395/6390)
+</h1>
+<h1>
+automne 2014 
+</h1>
+</center>
+<br>
+<br>
+<h2>
+Local
+</h2>
+cours théorique: <br> 
+Mercredi 15:30 - 17:30 S-144 Pav. Roger-Gaudry<br>
+Jeudi    9:30 - 10:30 Z-210 Pav. Claire-McNicoll<br><br>
+démo: <br>
+Jeudi 10:30 - 12:30 1340 Pav. Andre-Aisenstadt
+<br>
+<h2>
+Professeur 
+</h2>
+<a href="http://www.iro.umontreal.ca/~memisevr/">Roland Memisevic</a>
+<br>
+Consultation: après le cours ou sur rendez-vous.
+<br>
+roland.memisevic..at..umontreal.ca
+<br>
+Démos: Xavier Bouthillier (xavier.bouthillier..at..umontreal.ca), 
+Sébastien Jean (jeasebas..at..iro.umontreal.ca) 
+<br>
+<h2>
+Exigences 
+</h2>
+Préalable: MAT1600 ET MAT1978 ET IFT2125
+<br>
+<br>
+Généralement des connaisances des 
+probabilités, statistique, algèbre linéaire, l'algorithmiques, programmation 
+<h2>
+Livres recommandés pour le cours
+</h2>
+Aucun livre n'est obligatoire pour suivre le cours. 
+Pour approfondir la matière du cours vous pouvez vous référer à l'un ou l'aure des livres suivants:<br><br>
+<b>Christopher M. Bishop: Pattern Recognition and Machine Learning (la base de la majorité du cours)</b><br><br>
+David MacKay: Information Theory, Inference, and Learning Algorithms<br>
+Hastie, Tibshirani, Friedman: The Elements of Statistical Learning<br>
+Duda and Hart: Pattern Classification<br>
+<br>
+
+<h2 id="evaluation">Evaluation</h2>
+<big><big><span style="font-weight: bold;">Pour
+IFT3395</span></big></big>
+<table border="1" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<th>Mode d'évaluation</th>
+<th>Valeur</th>
+<th></th>
+</tr>
+<tr>
+<td>Travaux pratiques</td>
+<td>40%</td>
+<td>3 devoirs comportant des parties théoriques et de programmation et d'expérimentation. </td>
+</tr>
+<tr>
+<td>Examen intra</td>
+<td>30%</td>
+<td>15 oct, 15h30: P-310 Pav. Roger-Gaudry</td>
+</tr>
+<tr>
+<td>Examen final</td>
+<td>30%</td>
+<td>11 dec, 09:30 - 11:30 B-2325 Pav. 3200 J.-Brillant <br>
+</td>
+</tr>
+</tbody>
+</table>
+<br style="font-weight: bold;">
+<big><big><span style="font-weight: bold;">Pour
+IFT6390</span></big></big>
+<table border="1" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<th>Mode d'évaluation</th>
+<th>Valeur</th>
+<th></th>
+</tr>
+<tr>
+<td>Travaux pratiques</td>
+<td>25%</td>
+<td>3 devoirs comportant des parties théoriques et de programmation et d'expérimentation. </td>
+</tr>
+<tr>
+<td>Examen intra</td>
+<td>25%</td>
+<td>15 oct, 15h30: P-310 Pav. Roger-Gaudry</td>
+</tr>
+<tr>
+<td>Examen final</td>
+<td>25%</td>
+<td>11 dec, 09:30 - 11:30 B-2325 Pav. 3200 J.-Brillant <br>
+</tr>
+<tr>
+<td>Projet</td>
+<td>25%</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<br>
+<ul>
+<li><span style="font-weight: bold;">Projet</span> (pour les 
+étudiants d'IFT6390):&nbsp;Application des algorithmes d'apprentissage
+à une tâche proposée par l'étudiant et/ou implémentation d'un nouvel 
+algorithme d'apprentissage (programmation, expérimentation, et comparaison de performance). 
+Le projet&nbsp;doit être préalablement approuvé par le professeur.
+Projet final max 8 pages, style NIPS.  <br>
+<a href="projet.pdf"> Instructions pour le projet</a>
+</li>
+</ul>
+
+
+
+<br>
+<h2>
+Programme (provisoire)
+</h2>
+<table border="1">
+
+
+
+<tbody><tr>
+<td> 
+Date
+</td> 
+<td> 
+Cours 
+</td> 
+<td> 
+Sujet 
+</td>
+<td> 
+Lectures supplémentaires
+</td>
+<td> 
+Matériel du cours
+</td>
+</tr>
+
+
+<tr>
+<td> 
+3 Sept
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Introduction
+</td>
+<td> 
+Livre chapitre 1
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes1.pdf">notes</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+4 Sept 
+</td> 
+<td> 
+théorique
+</td> 
+<td> 
+Introduction (cont)
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+4 Sept 
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+Intro python 
+</td>
+<td> 
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/demo1.html">explications</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/1_python.ipynb" download="1_python.ipynb">exercices</a>
+</td>
+</tr>
+
+
+
+<tr>
+<td> 
+10 Sept 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Révision des probabilités
+</td>
+<td> 
+chapitres 1.2, (2.1-2.3)
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/probs.pdf">notes</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+11 Sept 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Régression linéaire 
+</td>
+<td> 
+chapitre 3
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes2.pdf">notes</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+11 Sept 
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+Intro Python/numpy
+</td>
+<td> 
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/demo2.html">explications</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/2_numpy.ipynb" download="2_numpy.ipynb">exercices</a> <br/>
+	<a href="http://www.iro.umontreal.ca/%7Edift3395/files/iris.txt" download="iris.txt">iris</a>
+
+
+</td>
+</tr>
+
+<tr>
+<td> 
+17 Sept 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Régression linéaire (cont) 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+18 Sept 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Révision gaussiennes  
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+
+<tr>
+<td> 
+18 Sept 
+</td> 
+<td> 
+démo
+</td> 
+<td> 
+	Distribution gaussienne et <br/> classifieur
+</td>
+<td> 
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/3_gaussiennes_v1.1.ipynb" download="3_gaussiennes_v1.1.ipynb">exercices v1.1</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/maxvraisemblancegaussienne.pdf">maximum de vraisemblance</a> <br/>
+
+</td>
+</tr>
+
+
+<tr>
+<td> 
+24 Sept 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Classification linéaire  
+</td>
+<td> 
+chapitres 4.1, 4.2, 4.3
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes3.pdf">notes</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+25 Sept 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Classification linéaire (cont)
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+25 Sept 
+</td>
+<td> 
+démo
+</td> 
+<td> 
+	Classifieur de bayes et <br/> régression linéaire
+</td>
+<td> 
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/3_gaussiennes_v1.2.ipynb" download="3_gaussiennes_v1.2.ipynb">exercices - gaussiennes v1.2</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/corrige_3_gaussiennes_v1.2.ipynb" download="corrige_3_gaussiennes_v1.2.ipynb">corrigé - gaussiennes v1.2</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/4_regression_lineaire_v1.1.ipynb" download="4_regression_lineaire_v1.1.ipynb">exercices - régression linéaire v1.1</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/corrige_4_regression_lineaire_v1.1.ipynb" download="corrige_4_regression_lineaire_v1.1.ipynb">corrigé - régression linéaire v1.1</a> <br/>
+
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/utilitaires4.py">utilitaires4.py</a> <br/>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+1 Oct
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Réseaux de neurones
+</td>
+<td> 
+chapitres 5.1-5.3, 5.5<br>
+<a href="http://www.iro.umontreal.ca/~vincentp/ift3395/lectures/backprop_old.pdf">Learning representations by back-propagating errors</a>
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes4.pdf">notes</a> 
+<br><br/>
+
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/aide_au_devoir1.ipynb" download="aide_au_devoir1.ipynb">aide au devoir 1</a> <br/> <br/>
+
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/devoirs/devoir1.pdf">devoir 1</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/devoirs/devoir1english.pdf">devoir 1 in english</a> <br>
+
+valeur: 14% pour IFT3395, 8% pour IFT6390
+</td>
+</tr>
+
+
+<tr>
+<td> 
+2 Oct
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Réseaux de neurones (cont)
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+2 Oct
+</td>
+<td> 
+démo
+</td> 
+<td> 
+	Classification linéaire et <br/> aide au devoir
+</td>
+<td> 
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/5_classification_v1.1.ipynb" download="5_classification_v1.1.ipynb">exercices - classification v1.1</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/corrige_5_classification.ipynb" download="corrige_5_classification_v1.1.ipynb">corrigé - classification v1.1</a> <br/>
+
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/utilitaires5.py" download="utilitaires5.py">utilitaires5.py</a> <br/>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+8 Oct
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Raisonnement bayesien 
+</td>
+<td> 
+chapitres 2.1, 2.2, 2.3, 3.3, 3.4, 3.5
+</td>
+<td> 
+devoir 1 à remettre<br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes5.pdf">notes</a> 
+</td>
+</tr>
+
+<tr>
+<td> 
+9 Oct
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Raisonnement bayesien (cont)
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+<tr>
+<td> 
+9 Oct
+</td>
+<td> 
+démo
+</td> 
+<td> 
+	<b>
+Examen pratique
+  </b>
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+15 Oct
+</td>
+<td> 
+	<b>
+Examen intra 
+       </b>
+</td> 
+<td> 
+	<b>
+Examen intra 
+       </b>
+</td>
+<td> 
+	<b>
+Examen intra 
+       </b>
+</td>
+<td> 
+15h30, Local: P-310 Pav. Roger-Gaudry
+</td>
+</tr>
+
+
+<tr>
+<td> 
+16 Oct
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Raisonnement bayesien (cont)
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+16 Oct
+</td>
+<td> 
+démo
+</td> 
+<td> 
+	Régression linéaire et <br /> correction du devoir
+</td>
+<td> 
+	<a href="http://deeplearning.net/software/theano/tutorial/index.html#tutorial">Tutoriel Theano</a> <br />
+	<a href="https://github.com/Theano/Theano/zipball/master">Theano.zip</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/installation_theano.html">Installation theano sur les comptes diro</a> <br/>
+
+	<a href="http://deeplearning.net/software/theano/tutorial/index.html#tutorial">Régression logistique</a> <br />
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/6_regression_logistique_v1.2.ipynb " download="6_regression_logistique_v1.2.ipynb">exercices - régression logistique v1.2</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/corrige_6_regression_logistique_v1.2.ipynb " download="corrige_6_regression_logistique_v1.2.ipynb">corrige - régression logistique</a> <br/>
+
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/utilitaires6.py" download="utilitaires6.py">utilitaires6.py</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/devoir1.ipynb" download="devoir1.ipynb">corrigé - devoir1</a> <br/>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+29 Oct
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Raisonnement bayesien (cont)
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+30 Oct
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+pas de classe 
+</td>
+<td> 
+pas de classe 
+</td>
+<td> 
+</td>
+</tr>
+
+<tr>
+<td> 
+30 Oct
+</td>
+<td> 
+démo
+</td> 
+<td> 
+	Réseaux de neurones
+</td>
+<td> 
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/devoir2Corr.pdf " download="devoir2Corr.pdf">devoir 2 (version corrigé)</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/devoir2englishCorr.pdf " download="devoir2englishCorr.pdf">devoir 2 in english (corrected version)</a> <br/> 
+valeur: 12% pour IFT3395, 8% pour IFT6390<br><br>
+
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/7_reseaux_neurones.ipynb " download="7_reseaux_neurones.ipynb">exercices - réseaux de neurones</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/corrige_7_reseaux_neurones.ipynb " download="corrige_7_reseaux_neurones.ipynb">corrigé - réseaux de neurones</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/utilitaires7.py" download="utilitaires7.py">utilitaires7.py</a> <br/>
+
+</td>
+</tr>
+
+<tr>
+<td> 
+5 Nov 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Apprentissage non-supervisé, clustering 
+</td>
+<td> 
+chapitres 2.3.9, 9.1-9.4
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes6.pdf">notes</a> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+6 Nov 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Apprentissage non-supervisé, clustering (cont)
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+6 Nov 
+</td>
+<td> 
+démo
+</td> 
+<td> 
+</td>
+<td> 
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/8_clusters.ipynb " download="8_clusters.ipynb">exercices - clustering</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/utilitaires8_ascii.py" download="utilitaires8.py">utilitaires8.v1.1.py</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/corrige_8_clusters.ipynb " download="corrige_8_clusters.ipynb">corrigé - clusters</a> <br/>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+12 Nov 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Variables latentes continues, PCA
+</td>
+<td> 
+chapitres 12.1, 12.2, 12.4
+</td>
+<td> 
+<b>devoir 2 à remettre</b><br><br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes7.pdf">notes</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+13 Nov 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Variables latentes continues, PCA (cont) 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+13 Nov 
+</td>
+<td> 
+démo
+</td> 
+<td> 
+PCA
+</td>
+<td> 
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/9_PCA.ipynb" download="9_PCA.ipynb">exercices - PCA</a> <br/>
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/corrige_9_PCA.ipynb " download="corrige_9_PCA.ipynb">corrigé - PCA</a> <br/>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+19 Nov 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Modélisation de séquences, HMM
+</td>
+<td> 
+chapitres 13.1, 13.2<br>
+<a href="http://www.cs.ubc.ca/~murphyk/Bayes/rabiner.pdf">Rabiner tutorat</a>
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes8.pdf">notes</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/devoir3.pdf">devoir 3</a> <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/devoir3english.pdf">devoir 3 in english</a> <br>
+valeur: 14% pour IFT3395, 9% pour IFT6390<br><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+20 Nov 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Modélisation de séquences, HMM (cont)
+</td>
+<td> 
+</td>
+<td> 
+<br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+20 Nov 
+</td>
+<td> 
+démo
+</td> 
+<td> 
+consultations sur le projet
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+26 Nov 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Modèles graphiques
+</td>
+<td> 
+chapitre 8
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes9.pdf">notes</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+27 Nov 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Modèles graphiques (cont.)
+</td>
+<td> 
+</td>
+<td> 
+devoir 3 à remettre
+</td>
+</tr>
+
+
+<tr>
+<td> 
+27 Nov 
+</td>
+<td> 
+démo
+</td> 
+<td> 
+</td>
+<td> 
+</td>
+<td> 
+	<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/demos/10_GMM_bayes.ipynb" download="10_GMM_bayes.ipynb">exercices - GMM , classifieur de Bayes</a> <br/>
+</td>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+3 Dec 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+Modèles non-paramétriques 
+</td>
+<td> 
+chapitre 6, 7.1
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift3395_2014/notes10.pdf">notes</a> <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+4 Dec 
+</td>
+<td> 
+théorique
+</td> 
+<td> 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+
+<tr>
+<td> 
+4 Dec 
+</td>
+<td> 
+démo
+</td> 
+<td> 
+consultations, questions 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+11 Dec 
+</td>
+<td> 
+	<b>
+Examen final
+       </b>
+</td> 
+<td> 
+	<b>
+Examen final
+       </b>
+</td>
+<td> 
+	<b>
+Examen final
+       </b>
+</td>
+<td> 
+09:30 - 12:29 B-2325 Pav. 3200 J.-Brillant <br>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+
+</tbody></table>
+<br>
+<br>
+
+<br>
+<br>
+Toutes les informations sur ce site sont pour référence seulement et peuvent changer à tout moment.
+<br>
+<br>
+<br>
+
+ 
+
+
+</body></html>

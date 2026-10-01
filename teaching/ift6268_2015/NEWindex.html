@@ -1,0 +1,562 @@
+
+<!-- saved from url=(0070)http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>IFT 6268 - Hiver 2015</title>
+</head>
+<body>
+<center>
+<h1>
+IFT 6268, Hiver 2015 <br>
+</h1>
+<h2>
+Machine Learning for Vision
+</h2>
+</center>
+<br>
+
+<center>
+<table border="0" cellspacing="0" cellpadding="2" width="50%" bgcolor="#FFFFFF">
+<tbody><tr>
+<td colspan="1"><img src="./IFT 6268 - Hiver 2015_files/convnet.png" width="100%"></td>
+<td width="30%"><img src="./IFT 6268 - Hiver 2015_files/800px-Ventral-dorsal_streams.svg.png" title="http://en.wikipedia.org/wiki/File:Ventral-dorsal_streams.svg#globalusage" width="100%"></td>
+<td width="30%"><img src="./IFT 6268 - Hiver 2015_files/mv_features1.png" width="100%"></td>
+</tr>
+<tr>
+<td><img src="./IFT 6268 - Hiver 2015_files/running_01.jpg" width="100%"></td>
+<td width="20%"><img src="./IFT 6268 - Hiver 2015_files/meanface.png" width="100%"></td>
+<td width="20%"><img src="./IFT 6268 - Hiver 2015_files/bus.png" width="100%"></td>
+</tr>
+</tbody></table>
+
+<br>
+</center>
+
+<br>
+<h2>
+Time and Place
+</h2>
+Tuesdays   14:30pm - 16:30pm <br> <b>1409</b> Pav. Andre-Aisenstadt <br><br>
+Wednesdays 15:30am - 17:30pm <br> <b>S1-125</b> Pav. Jean Coutu <br>
+
+<br>
+<h2>
+Instructor
+</h2>
+<a href="http://www.iro.umontreal.ca/~memisevr">Roland Memisevic</a>
+<br>
+Office : 3349, Pav. Andre-Aisenstadt<br>
+Office hours: drop in or by appointment. <br>
+email: memisevr@iro.umontreal.ca<br>
+<br>
+<h2>
+Topics
+</h2>
+Machine learning and visual perception; 
+natural image statistics;
+learning visual features; 
+bio-inspired models; 
+learning mid-level features, motion, structure; 
+vision and "big data". 
+<br>
+<br>
+<h2>
+Course description 
+</h2>
+Machine learning has made huge progress in recent years in building vision systems from the bottom up: by utilizing large amounts of image data and a minimum of hand-tweaking or human intervention. 
+Most of the recent advances in visual perception are due to the fact that images are 
+not "random": The set of natural images (imagine all photos that one could ever take on earth) is much smaller than the vast space of all <i> possible </i> images (all possible configurations of colored pixels). 
+Natural images, for example, tend to contain large, homogeneous areas, separated by few edges and fewer junctions. The combination of these features gives rise to objects, people, landscapes, and other things we typically see and care about. 
+By learning to utilize this inherent statistical structure in images, data-driven learning 
+makes it possible to simplify the task of making sense of images, 
+and to translate advances in compute power into advances in building vision systems.  
+<br>
+<br>
+In this course we will survey recent research on machine learning of visual perception, paying particular attention to bottom-up, data-driven methods and the statistics of natural images. 
+The format of the course will be a mix of lectures and discussions of recent papers in this emerging field. Final projects will be research based and may ultimately lead to a research paper in this area. 
+<br>
+<br>
+<h2>
+Prerequisites
+</h2>
+Familiarity with calculus, linear algebra and statistics is required.
+A background in vision is not required. 
+Some experience with machine learning, for example, as taught in IFT6141 (Reconnaissance des formes) or IFT6390 (Fondements de l'apprentissage machine) will be useful.
+If unsure about the sufficiency of your background, contact instructor. 
+<br>
+<br>
+
+<h2>
+Textbook
+</h2>
+
+<table width="80%">
+<tbody><tr>
+<td width="20%">
+<img src="./IFT 6268 - Hiver 2015_files/NatImStats.png" width="80%">
+</td>
+<td width="80%">
+Although there is no official class textbook, we will make some use of some material from "Natural Image Statistics: A Probabilistic Approach to Early Computational Vision" by Hyvarinen, Hurri, Hoyer (Springer 2009).
+</td>
+</tr>
+</tbody></table><ul>
+<li> Useful background on machine learning: Bishop (2006) "Pattern Recognition and Machine Learning". 
+</li></ul><br><h2>
+Marking scheme
+</h2><ul>
+<li>readings (10%):<br>
+Readings are worth 1% each on the honour system. <br>
+Once you have done the reading, email instructor 
+with the subject line "IFT6268 readingX completed"<br>
+instructor email is memisevr@iro.umontreal.ca
+</li>
+<li>assignments (30%):<br>
+3 assignments worth 10% each
+</li> 
+<li>class participation (20%):<br>
+Each student is expected to present one research paper and their project. See <a href="./presentations.html">detailed presentation guidelines</a>. 
+</li>
+<li>term project (40%): See <a href="./project.pdf">detailed project guidelines</a>. 
+</li>
+</ul><h2>
+Time Table 
+</h2><table>
+
+
+
+
+
+
+
+
+</table><table border="1" cellspacing="0" cellpadding="2" width="80%" bgcolor="#EEEEEE">
+
+<tbody><tr>
+<td> 
+Date
+</td> 
+<td> 
+Topic
+</td>
+<td width="40%"> 
+Readings
+</td>
+<td> 
+Notes
+</td>
+</tr>
+
+<tr>
+<th colspan="4">Introduction / background</th>
+</tr>
+
+
+
+<tr>
+<td> 
+Jan 13
+</td> 
+<td> 
+Lecture: Introduction
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/notes0.pdf">notes</a>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Jan 14
+</td> 
+<td> 
+Probability/linear algebra review 
+</td>
+<td> 
+<ul>
+</ul>
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/prob_review.pdf">notes</a>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Jan 20
+</td> 
+<td> 
+Python review
+</td>
+<td> 
+<ul>
+</ul>
+</td>
+<td> 
+<br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/notespython.pdf">notes</a><br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/logsumexp.py">logsumexp.py</a>
+</td>
+</tr>
+
+
+
+
+
+
+
+<tr>
+<th colspan="4"> Learning about images</th>
+</tr>
+
+
+<tr>
+<td> 
+Jan 21
+</td> 
+<td> 
+Filtering, convolution, phasor signals 
+</td>
+<td> 
+Reading 1:
+<a href="http://trin-hosts.trin.cam.ac.uk/fellows/horacebarlow/21.pdf">barlow</a>
+or 
+<a href="http://wexler.free.fr/library/files/attneave%20(1954)%20some%20informational%20aspects%20of%20visual%20perception.pdf">attneave</a>
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/notes1.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Jan 27
+</td> 
+<td> 
+Fourier transforms on images
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/notes2.pdf">notes</a><br>
+Reading 1 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Jan 28
+</td> 
+<td> 
+Fourier transforms on images (cont.) 
+</td>
+<td> 
+Reading 2: <a href="http://www.scholarpedia.org/article/Sparse_coding">sparse coding</a> (Foldiak, Endres; scholarpedia 2008) 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 3
+</td> 
+<td> 
+Sampling, leakage, windowing
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/notes3.pdf">notes</a><br>
+Reading 2 due <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 4
+</td> 
+<td> 
+PCA/whitening and Fourier transform
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/notes4.pdf">notes</a><br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/assignment1.pdf">assignment 1</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 10
+</td> 
+<td> 
+Whitening vs independence, ICA
+</td>
+<td> 
+Reading 3: <a href="http://redwood.berkeley.edu/bruno/papers/nature-paper.pdf">Emergence of Simple-Cell Receptive Field Properties by Learning a Sparse Code for Natural Images. </a>(Olshausen, Field 1996)
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/notes5.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 11
+</td> 
+<td> 
+ICA (contd.) 
+</td>
+<td> 
+Reading 4: <a href="http://papers.cnl.salk.edu/PDFs/The%20The%20_'Independent%20Components_'%20of%20natural%20scenes%20are%20edge%20filters%201997-4064.pdf">The ``independent components'' of natural scenes are edge filters</a> (Bell, Sejnowski 1997)<br>
+</td>
+<td> 
+Assignment 1 due <br>
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/assignment2.pdf">assignment 2</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 17
+</td> 
+<td> 
+Overcompleteness and energy-based models, <br>
+A1 discussion 
+</td>
+<td> 
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/notes6.pdf">notes</a><br>
+Reading 3 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 18
+</td> 
+<td> 
+Some biological aspects of vision 
+</td>
+<td> 
+Reading 5: <a href="http://onlinelibrary.wiley.com/doi/10.1207/s15516709cog0901_5/pdf">Feature Discovery by Competitive Learning</a> (Rumelhart, Zipser; 1985) (email instructor if you cannot access the pdf)
+</td>
+<td> 
+<a href="http://www.iro.umontreal.ca/~memisevr/teaching/ift6268_2015/notes7.pdf">notes</a><br>
+Reading 4 due <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 24
+</td> 
+<td> 
+Kmeans/Hebbian-style feature learning
+</td>
+<td> 
+</td>
+<td> 
+Reading 5 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 25
+</td> 
+<td> 
+Backprop-review, 
+autoencoders and energy functions
+</td>
+<td> 
+</td>
+<td> 
+Assignment 2 due 
+</td>
+</tr>
+
+
+
+
+<tr> 
+<td colspan="4">
+<h2> <center>Papers</center> </h2>
+<ul>
+    <li> 
+    <b>Learning Intermediate-Level Representations of Form and Motion from Natural Movies.</b> C. Cadieu, B. Olshausen. Neural Computation 2012. <a href="http://charles.cadieu.us/wp-content/uploads/2012/03/neco_a_00247_Cadieu_Olshausen_paper.pdf">[pdf]</a> <br>
+    (Somewhat theoretical) paper about harnessing video to learn about more than what images alone could teach you.  (also check out this related recent paper: <a href="http://ai.stanford.edu/~wzou/nips_ZouZhuNgYu12.pdf">pdf</a>)
+    </li>
+    <li> <b>Transforming Auto-encoders.</b> G. Hinton, et al. ICANN 2011. <a href="http://www.cs.toronto.edu/~hinton/absps/transauto6.pdf">[pdf]</a>  
+    <br>
+    Another (somewhat speculative) paper about what's wrong with conv-nets: How to learn about geometric relationships instead just statistics over local structure.
+    </li>
+    <li>
+    <b>On Random Weights and Unsupervised Feature Learning.</b> A Saxe, et al. ICML 2011 <a href="http://www.stanford.edu/~asaxe/papers/Saxe%20et%20al.%20-%202011%20-%20On%20Random%20Weights%20and%20Unsupervised%20Feature%20Learning.pdf">[pdf]</a> <br>
+    This paper shows why certain artitectures <b>random filters</b> work just fine for recognition. 
+    </li>
+    <li> <b> Building high-level features using large scale unsupervised learning.</b> Q. Le, M.A. Ranzato, R. Monga, M. Devin, K. Chen, G. Corrado, J. Dean, A. Ng. ICML 2012. <a href="http://research.google.com/pubs/archive/38115.pdf">[pdf]</a> <br>
+    The "google-brain" paper that got a lot of publicity: a stack of autoencoders for unsupervised learning. 
+    </li>
+    <li> <b>ImageNet Classification with Deep Convolutional Neural Networks.</b> A. Krizhevsky, I. Sutskever, G.E. Hinton. NIPS 2012. <a href="http://books.nips.cc/papers/files/nips25/NIPS2012_0534.pdf">[pdf]</a><br>
+    The paper describing the model that re-ignited interest in conv-nets by winning the ImageNet competition in 2012. 
+    </li>
+    <li> <b>An analysis of single-layer networks in unsupervised feature learning.</b> A. Coates, H. Lee, A. Y. Ng. AISTATS 2011. <a href="http://www.robotics.stanford.edu/~ang/papers/nipsdlufl10-AnalysisSingleLayerUnsupervisedFeatureLearning.pdf">[pdf]</a> <br>
+    Using unsupervised local features for recognition. 
+    </li>
+    <li>
+    <b>DeCAF: A Deep Convolutional Activation Feature for Generic Visual Recognition</b> Donahue et al. <a href="http://arxiv.org/pdf/1310.1531.pdf">[pdf]</a>
+    </li>
+    One (of many) follow-up works demonstrating the generality of learned features. (also see: <a href="http://arxiv.org/pdf/1403.6382v3.pdf">this related paper</a>)
+    <li>
+    <b>Rich feature hierarchies for accurate object detection and semantic segmentation</b> Girshik et al. <a href="http://arxiv.org/pdf/1311.2524v5.pdf">[pdf]</a>
+    An application to object detection. 
+    </li>
+    <li>
+    <b>Predicting Depth, Surface Normals and Semantic Labels with a Common Multi-Scale Convolutional Architecture</b> Eigen, Fergus 2014 <a href="http://arxiv.org/pdf/1411.4734v2.pdf">[pdf]</a><br>
+    Extract richer scene information with conv-nets. 
+    </li>
+    <li>
+    <b>DRAW: A Recurrent Neural Network For Image Generation</b>
+    <a href="http://arxiv-web3.library.cornell.edu/pdf/1502.04623v1.pdf">[pdf]</a>
+    Generating images with a recurrent network: Generating natural images is a common approach to visualizing what a network "knows". This is the best existing (very recent) result on this. 
+    </li>
+    <li>
+    <b>Going Deeper with Convolutions</b> Szegedy et al. 2014 <a href="http://arxiv.org/abs/1409.4842">[pdf]</a><br>
+    The paper describes GoogLeNet which one the 2014 ImageNet competition with a performance most people doubted would be possible. 
+(see this <a href="http://arxiv.org/abs/1312.4400">related paper</a>)
+    </li>
+    <li>
+    <b>Recurrent Models of Visual Attention </b> (Mnih et al.) <a href="http://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf">[pdf]</a><br>
+    Attention as a way to (potentially) go beyond conv-nets (see also this <a href="http://arxiv.org/pdf/1412.7755.pdf">follow-up work </a>)
+</ul>
+</font>
+</td>
+</tr>
+
+<tr>
+<td> 
+Mar 10
+</td> 
+<td> 
+Convolutional networks, <br>
+A2 discussion 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Mar 11
+</td> 
+<td> 
+Class shorter 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Mar 17
+</td> 
+<td> 
+Paper presentation and discussion
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+
+
+
+
+
+
+<tr> 
+<td colspan="4">
+<font size="2">
+    <ul>
+    </ul>
+</font>
+</td>
+</tr>
+
+
+
+
+
+</tbody></table>
+<br>
+
+
+<h2>
+Resources 
+</h2>
+<ul>
+</ul>
+<h3>
+Software 
+</h3>
+<ul>
+    <li> <a href="http://deeplearning.net/software/theano/">theano</a> is a python backprop library. 
+    </li><li> <a href="http://sklearn-theano.github.io/">sklearn-theano</a> wraps several networks in theano providing easy acces from python. 
+    </li><li> <a href="http://torch.ch/">torch</a> is a backprop library in lua. 
+    </li><li> <a href="https://code.google.com/p/cuda-convnet/">cuda-convnet</a> is an implementation of a convolutional network ("alex-net") in C++/Cuda. 
+    </li><li> <a href="https://github.com/uoguelph-mlrg/theano_alexnet">A theano based implementation</a> of "alex-net". 
+    </li><li> <a href="http://caffe.berkeleyvision.org/">caffe</a> is another convolutional network implementation. 
+</li></ul>
+<h3>
+Datasets
+</h3>
+<ul>
+    <li> The <a href="http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/index.html">PASCAL 2007 challenge </a> is a commonly used recognition benchmark. 
+    </li><li> The <a href="http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2012/index.html">latest PASCAL challenge</a>.  
+    </li><li> The <a href="http://groups.csail.mit.edu/vision/TinyImages/">80 mio tiny images</a> dataset.
+    </li><li> The <a href="http://www.cs.toronto.edu/~kriz/cifar.html">CIFAR datasets</a> for recognition from tiny images. 
+    </li><li> The <a href="http://www.stanford.edu/~acoates//stl10/">STL-10 dataset</a> is similar to CIFAR but with larger images. 
+    </li><li> The <a href="http://www.image-net.org/challenges/LSVRC/2012/index">imagenet challenge</a> has become a standard benchmark. 
+    </li><li> A <a href="http://groups.csail.mit.edu/vision/SUN/">scene recognition</a> dataset. 
+    </li><li> The <a href="http://www.di.ens.fr/~laptev/actions/hollywood2/">Hollywood 2 dataset</a> is a standard dataset for activity recogition. 
+    </li><li> The <a href="http://www.nada.kth.se/cvap/actions/">KTH actions dataset</a> is a somewhat outdated activity recognition dataset, but still used for proof-of-concept comparisons ("MNIST of activity recognition").
+    </li><li> A <a href="http://www.cse.yorku.ca/vision/research/spacetime-texture.shtml">Spacetime texture</a> dataset.
+    </li><li> A <a href="http://www.cse.yorku.ca/vision/research/dynamic-scenes/">Dynamic scenes</a> dataset.
+    </li><li> An <a href="http://vision.cs.uiuc.edu/attributes/">attributes</a> benchmark dataset.
+</li></ul>
+<h3>
+Other 
+</h3>
+Some <a href="http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html">benchmark results</a> on cifar and others. 
+<br>
+<br>
+<br>
+
+ 
+
+
+</body></html>

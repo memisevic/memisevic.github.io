@@ -1,0 +1,26 @@
+<!-- saved from url=(0058)http://www.ml.informatik.uni-frankfurt.de/teaching/ml2011/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+</head>
+<body>
+
+<h1>Installation de Theano sur les comptes du diro</h1>
+
+<p>
+Téléchargez theano en fichier zip
+<a href="https://github.com/Theano/Theano/zipball/master">ici</a>. Décompressez
+le en utilisant la commande unzip. Prenez bien en note où le dossier Theano est
+dézippé et ajoutez la ligne suivante à la fin de votre fichier ~/.bashrc:
+</p>
+
+<p>
+export PYTHONPATH=$PYTHONPATH:/chemin_du_dossier_Theano <br/>
+export THEANO_FLAGS=blas.ldflags=-lopenblas <br/>
+export LD_LIBRARY_PATH=/u/dift3395/OpenBLAS/:$LD_LIBRARY_PATH <br/>
+export LIBRARY_PATH=/u/dift3395/OpenBLAS/:$LIBRARY_PATH <br/>
+</p>
+
+<p>
+Vous devriez être en mesure d'importer theano avec python.
+</p>
+</body></html>

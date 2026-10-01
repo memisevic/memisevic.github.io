@@ -1,0 +1,698 @@
+<html>
+<head>
+<title>IFT 6268 - Winter 2016</title>
+</head>
+<body>
+<center>
+<h1>
+IFT 6268, Winter 2016 <br>
+</h1>
+<h2>
+Machine Learning for Vision
+</h2>
+</center>
+<br>
+
+<center>
+<table border=0 cellspacing=0 cellpadding=2 width="50%" bgcolor=#FFFFFF>
+<tr>
+<td colspan=1><img src="convnet.png" width="100%"></td>
+<td width=30%><img src="800px-Ventral-dorsal_streams.svg.png" title="http://en.wikipedia.org/wiki/File:Ventral-dorsal_streams.svg#globalusage" width="100%"></td>
+<td width=30%><img src="mv_features1.png" width="100%"></td>
+</tr>
+<tr>
+<td><img src="running_01.jpg" width="100%"></td>
+<td width=20%><img src="meanface.png" width="100%"></td>
+<td width=20%><img src="bus.png" width="100%"></td>
+</tr>
+</table>
+
+<br>
+</center>
+
+<br>
+<h2>
+Time and Place<br>
+</h2>
+Tuesdays   14:30pm - 16:30pm <br> <b>Z-260 </b> Pav. Claire-McNicoll <br><br>
+Wednesdays 15:30pm - 17:30pm <br> <b>Z-205 </b> Pav. Claire-McNicoll <br>
+
+<br>
+<h2>
+Instructor
+</h2>
+<a href="http://www.iro.umontreal.ca/~memisevr">Roland Memisevic</a>
+<br>
+Office : 3349, Pav. Andre-Aisenstadt<br>
+Office hours: drop in or by appointment. <br>
+email: memisevr@iro.umontreal.ca<br>
+<br>
+<h2>
+Topics
+</h2>
+Machine learning and visual perception; 
+natural image statistics;
+learning visual features; 
+bio-inspired models; 
+learning mid-level features, motion, structure; 
+vision and "big data". 
+<br>
+<br>
+<h2>
+Course description 
+</h2>
+Machine learning has made huge progress in recent years in building vision systems from the bottom up: by utilizing large amounts of image data and a minimum of hand-tweaking or human intervention. 
+Most of the recent advances in visual perception are due to the fact that images are 
+not "random": The set of natural images (imagine all photos that one could ever take on earth) is much smaller than the vast space of all <i> possible </i> images (all possible configurations of colored pixels). 
+Natural images, for example, tend to contain large, homogeneous areas, separated by few edges and fewer junctions. The combination of these features gives rise to objects, people, landscapes, and other things we typically see and care about. 
+By learning to utilize this inherent statistical structure in images, data-driven learning 
+makes it possible to simplify the task of making sense of images, 
+and to translate advances in compute power into advances in building vision systems.  
+<br>
+<br>
+In this course we will survey recent research on machine learning of visual perception, paying particular attention to bottom-up, data-driven methods and the statistics of natural images. 
+The format of the course will be a mix of lectures and discussions of recent papers in this emerging field. Final projects will be research based and may ultimately lead to a research paper in this area. 
+<br>
+
+
+
+<br>
+<h2>
+Prerequisites
+</h2>
+Familiarity with calculus, linear algebra and statistics is required.
+A background in vision is not required. 
+Some experience with machine learning, for example, as taught in IFT6141 (Reconnaissance des formes) or IFT6390 (Fondements de l'apprentissage machine) will be useful.
+If unsure about the sufficiency of your background, contact instructor. 
+<br>
+<br>
+
+
+<br>
+<h2>
+Marking scheme
+</h2>
+<ul>
+<li>readings (10%):<br>
+Readings are worth 1% each on the honour system. <br>
+Once you have done the reading, email instructor 
+with the subject line "IFT6268 readingX completed"<br>
+instructor email is memisevr@iro.umontreal.ca
+</li>
+<li>assignments (30%):<br>
+2 assignments worth 15% each 
+</li> 
+<li>class participation (20%):<br>
+Each student is expected to present two research papers, and to regularly write reports on topics discussed in class.
+<a href="presentations.html">detailed presentation guidelines</a>. 
+</li>
+<li>term project (40%): <a href="project.pdf">detailed project guidelines here</a>. 
+</li>
+</ul>
+
+
+
+<h2>
+Tentative Time Table 
+</h2>
+
+<table border=1 cellspacing=0 cellpadding=2 width="80%" bgcolor=#EEEEEE>
+<tr>
+<th colspan=4>Introduction / background</th>
+</tr>
+
+
+<tr>
+<td> 
+Date
+</td> 
+<td> 
+Topic
+</td>
+<td width=40%> 
+Readings
+</td>
+<td> 
+Notes
+</td>
+</tr>
+
+
+
+<tr>
+<td> 
+Jan 6
+</td> 
+<td> 
+Intro 
+</td>
+<td> 
+</td>
+<td> 
+<a href="notes0.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Jan 19
+</td> 
+<td> 
+Review of basic probabilities/linear algebra/ML
+</td>
+<td> 
+</td>
+<td> 
+<a href="notes_review.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Jan 20
+</td> 
+<td> 
+Lecture: Some biological aspects of vision 
+</td>
+<td> 
+Reading 1: <a href="http://wexler.free.fr/library/files/attneave%20(1954)%20some%20informational%20aspects%20of%20visual%20perception.pdf ">Attneave 1954</a>
+</td>
+<td> 
+<a href="notes1.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Jan 26
+</td> 
+<td> 
+Lecture: Back-prop and neural networks 
+</td>
+<td> 
+Reading 2: <a href="http://www.scholarpedia.org/article/Sparse_coding">sparse coding</a> (Foldiak, Endres; scholarpedia 2008) 
+</td>
+<td> 
+<a href="notes2.pdf">notes</a><br>
+Reading 1 due <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 2
+</td> 
+<td> 
+Lecture: Convolutional networks 
+</td>
+<td> 
+Reading 3: <a href="http://arxiv.org/pdf/1410.0759.pdf">cudnn</a> 
+
+</td>
+<td> 
+Reading 2 due <br>
+<a href="notes3.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 3
+</td> 
+<td> 
+Lecture: Convolutional networks (contd.) 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 9
+</td> 
+<td> 
+Lecture: Convnets and Fourier (I)
+</td>
+<td> 
+Reading 4: <a href="http://arxiv.org/pdf/1409.0575v3.pdf">imagenet</a> Sections 1 and 2, skim the rest.
+</td>
+<td> 
+Reading 3 due <br>
+<a href="notes4.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 10
+</td> 
+<td> 
+Lecture: Fourier (II)
+</td>
+<td> 
+</td>
+<td> 
+<a href="notes5.pdf">notes</a><br>
+(A1 deferred to next week)<br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 16
+</td> 
+<td> 
+Lecture: Fourier (III)
+</td>
+<td> 
+Reading 5: <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">"alex-net"</a> 
+</td>
+<td> 
+<a href="notes6.pdf">notes</a><br>
+<a href="assignment1.pdf">Assignment 1</a><br>
+Reading 4 due <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 17
+</td> 
+<td> 
+Lecture: Fourier (III) contd.
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 23
+</td> 
+<td> 
+Paper presentations and discussion 
+</td>
+<td> 
+Reading 6: <a href="http://citeseer.ist.psu.edu/viewdoc/download?doi=10.1.1.44.2898&rep=rep1&type=pdf">Thrun 1996</a><br>
+<br>
+papers: 
+<ul>
+    <li>
+    <b>Going Deeper with Convolutions</b> Szegedy et al. 2014 <a href="http://arxiv.org/abs/1409.4842">[pdf]</a><br>
+    The paper describes GoogLeNet which won the 2014 ImageNet competition with a performance most people doubted would be possible anytime soon. (see also this <a href="http://arxiv.org/abs/1312.4400">related paper</a>) (<b>Florian B.</b>)
+    </li>
+    <li>
+    <b>Batch Normalization: Accelerating Deep network training by reducing internal covariate shift</b> Ioffe, Szegedy 2015  <a href="http://arxiv.org/pdf/1502.03167v3.pdf">[pdf]</a>(<b>Guillaume B.</b>)
+    </li>
+    <li>
+    <b>Very Deep Convolutional Networks For Large-scale Image Recognition</b> Simonyan Zisserman 2015 <a href="http://arxiv.org/pdf/1409.1556.pdf">[pdf]</a>
+    A CNN architecture that has become very common. (<b>Olexa B.</b>)
+    </li>
+</ul>
+</td>
+<td> 
+Reading 5 due <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Feb 24 
+</td> 
+<td> 
+Paper presentations and discussion 
+</td>
+<td> 
+papers: 
+<ul>
+    <li>
+    <b>Deep Residual Learning for Image Recognition</b> He et al., 2015 <a href="http://arxiv.org/pdf/1512.03385v1.pdf">[pdf]</a><br>
+    Training very very deep nets, ILSVRC 2015 winner. <b>(Thomas G.)</b>
+    </li>
+    <li>
+    <b>Spatial Transformer Networks</b> Jaderberg et al., 2016 <a href="http://arxiv.org/pdf/1506.02025v3.pdf">[pdf]</a><br> (<b>Vincent M.</b>)
+    </li>
+</ul>
+</td>
+<td> 
+A1 due 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Mar 8
+</td> 
+<td> 
+Paper presentations and discussion 
+</td>
+<td> 
+papers: 
+<ul>
+    <li>
+    <b>Predicting Depth, Surface Normals and Semantic Labels with a Common Multi-Scale Convolutional Architecture</b> Eigen, Fergus 2014 <a href="http://arxiv.org/pdf/1411.4734v2.pdf">[pdf]</a>
+(<a href="http://cs.nyu.edu/~silberman/datasets/nyu_depth_v2.html">dataset</a>)
+<br>
+    Extract richer scene information with conv-nets. (<b>Chinna S.</b>)
+    </li>
+    <li>
+    <b>DeCAF: A Deep Convolutional Activation Feature for Generic Visual Recognition</b> Donahue et al. <a href="http://arxiv.org/pdf/1310.1531.pdf">[pdf]</a>
+    One (of several) papers demonstrating the generality of learned convnet features. (also see: <a href="http://arxiv.org/pdf/1403.6382v3.pdf">this related paper</a>) (<b>Luiz G. H.</b>)
+    </li>
+    <li>
+    <b>Learning Visual Features from Large Weakly Supervised Data</b> (Joulin, v.d.Maaten, Jabri, Vasilache; 2015) <a href="http://arxiv.org/pdf/1511.02251v1.pdf">[pdf]</a> (<b>Daniel E.</b>)<br>
+    Can we do well without imagenet. 
+    </li>
+</ul>
+</td>
+<td> 
+Reading 6 due <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Mar 9
+</td> 
+<td> 
+Paper presentations and discussion 
+</td>
+<td> 
+Reading 7: <a href="http://arxiv.org/pdf/1405.0312v3.pdf">MS COCO</a> (skim the details) <br><br>
+papers:
+<ul>
+    <li>
+    <b>Rich feature hierarchies for accurate object detection and semantic segmentation</b> (Girshik et al. 2014) <a href="http://www.cs.berkeley.edu/~rbg/papers/r-cnn-cvpr.pdf">[pdf]</a><br>
+    </li>
+    <li>
+    <b> Fast R-CNN</b> (Girshik 2015) <a href="http://arxiv.org/abs/1504.08083">[pdf]</a>
+see also <a href="http://arxiv.org/pdf/1506.01497.pdf">faster r-cnn</a><br> (<b>Danlan C.</b>)
+    </li>
+    <li>
+    <b>You Only Look Once: Unified, Real-Time Object Detection</b> (Redmon et al. 2015) <a href="http://arxiv.org/pdf/1506.02640v4.pdf">[pdf]</a> (<b>Sarath C.</b>)
+    </li>
+    <li>
+    <b>C3D: Generic Features for Video Analysis</b> Tran et al. 2015 <a href="http://arxiv.org/abs/1412.0767">[pdf]</a> (<b>Faruk A.</b>)
+    </li>
+</ul>
+</td>
+<td> 
+<a href="assignment2.pdf">Assignment 2</a><br>
+</td>
+</tr>
+
+
+
+<tr>
+<td> 
+Mar 15
+</td> 
+<td> 
+-- class canceled --
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Mar 16
+</td> 
+<td> 
+-- class canceled --
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Mar 22
+</td> 
+<td> 
+Lecture: Reinforcement Learning 
+</td>
+<td> 
+Reading 8: <a href="http://arxiv.org/pdf/1505.00468v5.pdf">VQA: Visual Question Answering</a> (without appendix) <br><br>
+</td>
+<td> 
+<a href="notes7.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Mar 23
+</td> 
+<td> 
+Paper presentations and discussion 
+</td>
+<td> 
+*** No more reaction reports required. *** <br>
+<ul>
+    <li>
+    <b>Image Super-Resolution Using Deep Convolutional Networks</b> (Dong et al. 2015) <a href="http://arxiv.org/abs/1501.00092">[pdf]</a> (<b>Mario B.</b>)
+    </li>
+    <li>
+    <b>DenseCap: Fully Convolutional Localization Networks for Dense Captioning</b> (Johnson et al. 2015) <a href="http://arxiv.org/abs/1511.07571">[pdf]</a> (<b>Sarath C.</b>)
+    </li>
+    <li>
+    <b>Visual7W: Grounded Question Answering in Images</b> Zhu et al 2015 <a href="http://arxiv.org/abs/1511.03416">[pdf]</a> (<b>Vincent M.</b>)
+    </li>
+</ul>
+</td>
+<td> 
+*** No more reaction reports required. *** <br>
+A2 due <br>
+Reading 7 due <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Mar 29
+</td> 
+<td> 
+Paper presentations and discussion 
+</td>
+<td> 
+Reading 9: <a href="http://googleresearch.blogspot.ca/2015/06/inceptionism-going-deeper-into-neural.html">deep dream blog post</a>, also have a look at the <a href="https://github.com/google/deepdream/blob/master/dream.ipynb">code</a> <br><br> 
+*** No more reaction reports required. *** <br>
+<ul>
+    <li>
+    <b>Ask Your Neurons: A Neural-based Approach to Answering Questions about Images</b> (Malinowski et al, 2015) <a href="https://www.d2.mpi-inf.mpg.de/sites/default/files/iccv15-neural_qa.pdf">[pdf]</a> 
+    see also the <a href="https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/vision-and-language/visual-turing-challenge/">DAQUAR dataset</a> (<b>Faruk A.</b>)
+    </li>
+    <li>
+    <b>Natural Language Object Retrieval</b> (Hu et al, 2015) <a href="http://arxiv.org/pdf/1511.04164v1.pdf">[pdf]</a> (<b>Luiz H.</b>)
+    see also the <a href="http://tamaraberg.com/referitgame/">dataset</a>
+    </li>
+</ul>
+</td>
+<td> 
+Reading 8 due <br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+Mar 30
+</td> 
+<td> 
+Paper presentations and discussion 
+</td>
+<td> 
+*** No more reaction reports required. *** <br>
+<ul>
+    <li>
+        <b>Multiple Object Recognition with Visual Attention</b> (Ba et al., 2015) <a href="http://arxiv.org/abs/1412.7755">[pdf]</a> see also <a href="http://papers.nips.cc/paper/5542-recurrent-models-of-visual-attention.pdf">this earlier paper</a> (Mnih et al) (<b>Olexa B.</b>)
+    </li>
+    <li>
+        <b>DRAW: A Recurrent Neural Network For Image Generation</b> (Gregor et al., 2015) <a href="http://arxiv.org/abs/1502.04623">[pdf]</a>(<b>Daniel E.</b>)
+    </li>
+    <li>
+        <b>A Neural Algorithm of Artistic Style</b> (Gatys et al, 2015) <a href="http://arxiv.org/abs/1508.06576">[pdf]</a> (<b>Thomas G.</b>)
+    </li>
+</ul>
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+April 5
+</td> 
+<td> 
+Paper presentations and discussion 
+</td>
+<td> 
+Reading 10: Carefully read one paper that is highly relevant to your final project. In your email state which paper you read.<br><br> 
+*** No more reaction reports required. *** <br>
+<ul>
+    <li>
+        <b>DeepStereo: Learning to Predict New Views from the World's Imagery</b> (Flynn et al, 2015) <a href="http://arxiv.org/abs/1506.06825">[pdf]</a> (<b>Florian B.</b>)
+    </li>
+    <li>
+        <b>Pixel Recurrent Neural Networks</b> (van den Oord, et al, 2016) <a href="http://arxiv.org/pdf/1601.06759v2.pdf">[pdf]</a> (<b>Guillaume B.</b>)
+    </li>
+    <li>
+        <b>Render for CNN: Viewpoint Estimation in Images Using CNNs Trained with Rendered 3D Model Views</b> (Su et al, 2015) <a href="http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Su_Render_for_CNN_ICCV_2015_paper.pdf">[pdf]</a> (<b>Mario B.</b>)
+    </li>
+</ul>
+</td>
+<td> 
+Reading 9 due <br>
+</td>
+</tr>
+
+
+
+<tr>
+<td> 
+April 6
+</td> 
+<td> 
+</td>
+<td> 
+*** No more reaction reports required. *** <br>
+<ul>
+    <li>
+    <b>MovieQA: Understanding Stories in Movies through Question-Answering</b> (Tapaswi et al, 2015) <a href="http://arxiv.org/pdf/1512.02902v1.pdf">[pdf]</a> (<b>Danlan C.</b>)
+    </li>
+    <li>
+     <b>Unsupervised Representation Learning With Deep Convolutional Generative Adversarial Networks</b> (Radford et al, 2016) <a href="http://arxiv.org/pdf/1511.06434v2.pdf">[pdf]</a> (<b>Chinna S.</b>)
+    </li>
+    <li>
+    <b>Visual genome</b> (Krishna et al. 2016)<a href="http://visualgenome.org/static/paper/Visual_Genome.pdf">[pdf]</a> 
+    </li>
+    <li>
+    <b>Dynamic Memory Networks for Visual and Textual Question Answering</b> (Xiong et al, 2016) <a href="http://arxiv.org/pdf/1603.01417v1.pdf">[pdf]</a>
+    </li>
+</ul>
+</td>
+<td> 
+</td>
+</tr>
+
+
+<tr>
+<td> 
+April 12
+</td> 
+<td> 
+Lecture: Generative and variational methods 
+</td>
+<td> 
+</td>
+<td> 
+Reading 10 due <br>
+<a href="notes8.pdf">notes</a><br>
+</td>
+</tr>
+
+
+<tr>
+<td> 
+April 13
+</td> 
+<td> 
+Final project presentations and discussions 
+</td>
+<td> 
+</td>
+<td> 
+</td>
+</tr>
+
+
+
+
+
+
+
+<tr> 
+<td colspan=4>
+<font size="2">
+    <ul>
+    </ul>
+</font>
+</td>
+</tr>
+
+
+
+
+
+</table>
+
+<h2>
+Resources 
+</h2>
+<ul>
+</ul>
+<h3>
+Software 
+</h3>
+<ul>
+    <li> <a href="http://deeplearning.net/software/theano/">theano</a> an open-source python backprop library. 
+    <li> <a href="https://www.tensorflow.org/">TensorFlow</a> an open-source backprop library (developed by google) with Python bindings.  
+    <li> <a href="http://torch.ch/">torch</a> a backprop library in lua. 
+    <li> <a href="http://caffe.berkeleyvision.org/">caffe</a> deep learning library. Mainly vision and convolutional networks.  
+    <li> <a href="http://sklearn-theano.github.io/">sklearn-theano</a> wraps several pretrained networks in theano providing easy acces from python. 
+    <li> <a href="https://code.google.com/p/cuda-convnet/">cuda-convnet</a> an early implementation of a convolutional network running on GPU ("alex-net").
+    <li> <a href="https://github.com/uoguelph-mlrg/theano_alexnet">a theano based implementation</a> of the alex-net architecture. 
+</ul>
+<h3>
+Datasets
+</h3>
+<ul>
+    <li> The <a href="http://www.image-net.org/challenges/LSVRC/2012/index">Imagenet Large Scale Visual Recognition Challenge</a> is now the standard benchmark for object recognition. 
+    <li> <a href="http://mscoco.org/">MS COCO</a> visual object recognition dataset and set of challenges. 
+    <li> <a href="http://visualgenome.org/">Visual Genome</a> is a fine-grained visual recognition dataset. 
+    <li> <a href="http://www.visualqa.org/">Visual Question Answering</a> is a dataset/challenge on fine-grained image understanding. 
+    <li> The <a href="http://pascallin.ecs.soton.ac.uk/challenges/VOC/voc2007/index.html">PASCAL 2007 challenge </a> is an older, commonly used recognition benchmark. 
+    <li> The <a href="http://groups.csail.mit.edu/vision/TinyImages/">80 mio tiny images</a> dataset.
+    <li> The <a href="http://www.cs.toronto.edu/~kriz/cifar.html">CIFAR datasets</a> for recognition from tiny images. 
+    <li> The <a href="https://cs.stanford.edu/~acoates/stl10/">STL-10 dataset</a> is similar to CIFAR but with larger images. 
+    <li> A <a href="http://groups.csail.mit.edu/vision/SUN/">scene recognition</a> dataset. 
+    <li> The <a href="http://www.di.ens.fr/~laptev/actions/hollywood2/">Hollywood 2 dataset</a> is a standard dataset for activity recogition. 
+    <li> The <a href="http://www.nada.kth.se/cvap/actions/">KTH actions dataset</a> is a somewhat outdated activity recognition dataset, but still used for proof-of-concept comparisons ("MNIST of activity recognition").
+    <li> The <a href="https://code.google.com/p/sports-1m-dataset/">sports 1M</a> dataset is a large activity recognition dataset. 
+    <li> A <a href="http://www.cse.yorku.ca/vision/research/spacetime-texture.shtml">Spacetime texture</a> dataset.
+    <li> A <a href="http://www.cse.yorku.ca/vision/research/dynamic-scenes/">Dynamic scenes</a> dataset.
+    <li> A <a href="http://vision.cs.uiuc.edu/attributes/">visual attributes</a> dataset.
+</ul>
+<br>
+<br>
+</body>
+</html> 
+
+

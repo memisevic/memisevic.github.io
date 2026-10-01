@@ -254,6 +254,51 @@ a:focus-visible {
 }
 
 
+/* ---- tutorials (richer layout, more prominent than plain entries) ---- */
+.tutorials {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tutorials > li {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1rem;
+  padding: 1rem 1rem 1rem 0.9rem;
+  margin-bottom: 0.6rem;
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--accent);
+  border-radius: 2px;
+}
+.tutorials__meta {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--text-faint);
+  padding-top: 0.2rem;
+  letter-spacing: 0.02em;
+}
+.tutorials__title {
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.4;
+  margin-bottom: 0.15rem;
+}
+.tutorials__venue {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  margin-bottom: 0.35rem;
+}
+.tutorials__links {
+  font-size: 0.88rem;
+}
+.tutorials__links a {
+  margin-right: 0.1rem;
+}
+@media (max-width: 30rem) {
+  .tutorials > li { grid-template-columns: 1fr; gap: 0.25rem; }
+}
+
+
 /* ---- talks / teaching / grants (unified) ---- */
 .entries {
   list-style: none;
