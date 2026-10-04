@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://memisevic.github.io/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/tutorials/dlss2015/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/tutorials/multiview-feature-learning-cvpr/</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/tutorials/iciptutorial2015/</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/tutorials/relational/</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/teaching/ift6268_2016/</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/teaching/ift6268_2015/</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/teaching/ift6268_2013/</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/teaching/ift3395_2014/</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/teaching/ift2821_2015/</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/teaching/mlvis2013/</loc>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://memisevic.github.io/teaching/ml2011/</loc>
+    <priority>0.4</priority>
+  </url>
+
+</urlset>
