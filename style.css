@@ -254,6 +254,21 @@ a:focus-visible {
 }
 
 
+/* ---- highlight callout (near the top of the page) ---- */
+.highlight {
+  margin-top: 2.5rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--bg-subtle);
+  border-left: 3px solid var(--accent);
+  border-radius: 2px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.highlight p { margin: 0; color: var(--text-muted); }
+.highlight strong { color: var(--text); font-weight: 600; }
+.highlight em { color: var(--text); font-style: italic; }
+
+
 /* ---- tutorials (richer layout, more prominent than plain entries) ---- */
 .tutorials {
   list-style: none;
